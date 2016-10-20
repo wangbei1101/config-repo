@@ -14,6 +14,9 @@ spring:
   cloud:
     config:
       uri: ${vcap.services.${PREFIX:}configserver.credentials.uri:http://user:password@${PREFIX:}configserver.${application.domain:cfapps.io}}
+  test:
+    properties:
+      name: weber
 oauth2:
   client:
     tokenUri: ${vcap.services.${PREFIX:}sso.credentials.tokenUri:}
